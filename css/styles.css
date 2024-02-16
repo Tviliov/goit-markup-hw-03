@@ -1,9 +1,19 @@
 /* -----Common styles-----*/
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 ul, ol {
     list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
 }
 a {
     text-decoration: none;
+}
+img {
+    display: block;
 }
 body {
     font-family: "Roboto", sans-serif;
@@ -14,6 +24,14 @@ body {
     color: #434455;
     background-color: #FFFFFF;
 }
+.container {
+    width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* -----/Common styles-----*/
 
 /* -----Nav section-----*/
