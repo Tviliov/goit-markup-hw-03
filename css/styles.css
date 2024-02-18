@@ -38,6 +38,17 @@ body {
 /* -----/Common styles-----*/
 
 /* -----Nav section-----*/
+.top-line {
+    border-bottom: 1px solid #e7e9fc;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+}
+.page-nav {
+    display: flex;
+    align-items: center;
+}
 .top-logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -46,19 +57,33 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
+    margin-right: 76px;
 }
 .top-logo-span {
     color: #2e2f42;
+    
+}
+.menu {
+    display: flex;
+    column-gap: 40px;
 }
 .menu-link {
     font-weight: 500;
     color: #2e2f42;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: block;
 }
 .menu-link:hover, .menu-link:focus {
     color: #404bbf;
 }
 .address {
-    font-style: normal
+    font-style: normal;
+    margin-left: auto;
+}
+.address-list {
+    display: flex;
+    gap: 40px;
 }
 .address-link {
     color: #434455;
@@ -71,6 +96,7 @@ body {
 /* -----Hero section-----*/
 .hero-section {
     background: #2e2f42;
+    padding: 188px 0;
     
 }
 .hero-section-title {
@@ -80,8 +106,16 @@ body {
     letter-spacing: 0.02em;
     text-align: center;
     color: #fff;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 496px;
+    margin-bottom: 48px;
 }
 .button {
+    display: block;
+    align-items: center;
+    margin: 0 auto;
+    min-width: 169px;
     cursor: pointer;
     font-family: inherit;
     font-weight: 500;
@@ -89,6 +123,9 @@ body {
     letter-spacing: 0.04em;
     color: #ffffff;
     background: #4d5ae5;
+    border-radius: 4px;
+    padding: 16px 32px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 .button:hover, .button:focus {
     background: #404bbf;
@@ -97,30 +134,32 @@ body {
 
 /* -----Benefits section-----*/
 .benefits-hiden-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    text-align: center;
-    color: transparent;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 .benefits-list {
     display: flex;
     justify-content: center;
     column-gap: 24px;
-    border: 1px solid red;
 }
 .benefits-list-item {
-    border: 1px solid red;
+    max-width: calc((100% - 72px) / 4);
 }
 .benefits-list-title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    text-align: center;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 /* -----/Benefits section-----*/
 
@@ -132,8 +171,8 @@ body {
 .team-list {
     display: flex;
     justify-content: center;
-    column-gap: 24px;
-    border: 1px solid red;
+    flex-wrap: wrap;
+    gap: 24px;
 }
 .team-title {
     font-weight: 700;
@@ -142,17 +181,24 @@ body {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: #2e2f42;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 72px;
 }
 .team-list-item {
+    width: calc((100% - 72px) / 4);
     background-color: #FFFFFF
 }
-
+.team-content {
+    padding: 32px 16px;
+}
 .team-list-item-title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 .team-list-item-text {
     font-size: 16px;
@@ -168,17 +214,20 @@ body {
     text-align: center;
     text-transform: capitalize;
     color: #2e2f42;
+    margin-bottom: 72px;
 }
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px;
-    border: 1px solid red;
+    gap: 48px 24px;
 }
 .portfolio-list-item {
-    border: 1px solid red;
-
+    width: calc((100% - 48px) / 3);
+}
+.portfolio-content {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
 }
 .portfolio-list-item-title {
     font-weight: 500;
@@ -186,6 +235,7 @@ body {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 /* -----Portfolio section-----*/
 
@@ -197,7 +247,15 @@ body {
     background: #2e2f42;
 
 }
+.bottom-container {
+padding-left: auto;
+padding-right: auto;
+padding-top: 100px;
+padding-bottom: 100px;
+}
+
 .bottom-logo {
+    display: block;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -205,7 +263,11 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
+    margin-bottom: 16px;
 }
 .bottom-logo-span{
     color: #f4f4fd;
+}
+.bottom-text {
+    max-width: 264px;
 }
